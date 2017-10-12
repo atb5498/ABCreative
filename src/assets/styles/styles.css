@@ -1,0 +1,23 @@
+body {
+    background-color: #000000;
+    text-align: center;
+}
+
+#logo {
+    padding-top: 100px;
+    padding-bottom: 100px;
+}
+
+.my-gallery {
+    max-width: 1200px;
+    margin: auto;
+}
+
+.image {
+    display: inline-block;
+    margin: 5px;
+}
+
+.image-preview {
+    max-width: 300px;
+}
