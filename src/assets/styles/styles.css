@@ -4,8 +4,10 @@ body {
 }
 
 #logo {
-    padding-top: 100px;
-    padding-bottom: 100px;
+    padding-top: 70px;
+    padding-bottom: 70px;
+    width: 50%;
+    max-width: 200px;
 }
 
 .my-gallery {
@@ -16,8 +18,9 @@ body {
 .image {
     display: inline-block;
     margin: 5px;
+    width: 25%;    
 }
 
 .image-preview {
-    max-width: 300px;
+    width: 100%;
 }

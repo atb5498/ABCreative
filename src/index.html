@@ -3,6 +3,8 @@
 
 <head>
     <title>ABCreative</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
     <link rel="stylesheet" type="text/css" href="assets/styles/styles.css">
 
     <!-- Core CSS file -->
@@ -23,21 +25,22 @@
 
 <body>
     <div>
-        <img id="logo" src="assets/images/ab.png" alt="ABCreative Logo" width="307" height="363">
+        <img id="logo" src="assets/images/ab.png" alt="ABCreative Logo" />
     </div>
 
     <div class="my-gallery" itemscope itemtype="http://schema.org/ImageGallery">
         {% for image in images %}
         <figure class="image" itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
             <a href={{'https://' + image.fields.file.url + '?w=1000'}} itemprop="contentUrl" data-size={{1000 + 'x' + ((image.fields.file.details.image.height * (1000 / image.fields.file.details.image.width)) | round)}}>
-              <img class="image-preview" src={{'https://' + image.fields.file.url + '?w=300&h=300&fit=thumb'}} itemprop="thumbnail" alt="Image description" width="300" />
+              <img class="image-preview" src={{'https://' + image.fields.file.url + '?w=300&h=300&fit=thumb'}} itemprop="thumbnail" alt="Image description" />
             </a>
           </figure>
         {% endfor %}
     </div>
 
     {% include "partials/_photoswipe.html" %}
-    {% include "partials/_photoswipe-from-dom-script.html" %}
+
+    <script src="/assets/vendor/photoswipe/photoswipe-ui-default.min.js"></script> {% include "partials/_photoswipe-from-dom-script.html" %}
 </body>
 
 </html>
